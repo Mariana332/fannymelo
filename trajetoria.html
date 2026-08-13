@@ -36,15 +36,9 @@ h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;letter-spac
 .reveal.in{opacity:1;transform:translateY(0);}
 @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none;}}
 
-.logo-mark{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;line-height:0;}
-.logo-mark svg{display:block;}
-.logo-wordmark{display:flex;align-items:center;gap:10px;margin-top:2px;}
-.logo-wordmark span{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.01em;color:var(--laranja);line-height:1;}
-.logo-wordmark .bar{width:30px;height:5px;border-radius:var(--r-pill);background:var(--laranja);display:inline-block;}
-.nav .logo-mark svg{height:32px;width:auto;}
-.nav .logo-wordmark span{font-size:17px;}
-.nav .logo-wordmark .bar{width:20px;height:4px;}
-footer .logo-mark svg{height:36px;width:auto;}
+.logo-img{display:block;height:40px;width:auto;}
+.nav .logo-img{height:32px;}
+footer .logo-img{height:42px;}
 
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 32px;background:rgba(255,255,255,0.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--linha-clara);transition:background .3s ease;}
 .nav .brand{display:flex;align-items:center;gap:10px;}
@@ -99,16 +93,7 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
 
 <header class="nav">
   <a href="index.html" class="brand">
-    <span class="logo-mark">
-      <svg viewBox="0 0 56 64" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="0,0 22,0 11,17" fill="#FF6C00"/>
-        <polygon points="24,0 46,0 35,17" fill="#FBBB0C"/>
-        <polygon points="0,21 26,21 13,42" fill="#FF6C00"/>
-        <polygon points="28,21 54,21 41,42" fill="#FBBB0C"/>
-        <polygon points="12,48 22,64 2,64" fill="#FBBB0C"/>
-      </svg>
-      <span class="logo-wordmark"><span>MELO</span><i class="bar"></i></span>
-    </span>
+    <img src="assets/logo-fanny-melo.png" alt="Fanny Melo" class="logo-img">
   </a>
   <nav class="nav-links">
     <a href="index.html">Quem sou eu</a>
@@ -187,15 +172,7 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
   <div class="wrap">
     <div class="footer-top">
       <div>
-        <span class="logo-mark">
-          <svg viewBox="0 0 56 64" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="0,0 22,0 11,17" fill="#FF6C00"/>
-        <polygon points="24,0 46,0 35,17" fill="#FBBB0C"/>
-        <polygon points="0,21 26,21 13,42" fill="#FF6C00"/>
-        <polygon points="28,21 54,21 41,42" fill="#FBBB0C"/>
-        <polygon points="12,48 22,64 2,64" fill="#FBBB0C"/>
-      </svg>
-        </span>
+        <img src="assets/logo-fanny-melo.png" alt="Fanny Melo" class="logo-img">
         <div class="slogan">Gente de verdade, coragem de sempre.</div>
       </div>
       <div class="footer-cols">
