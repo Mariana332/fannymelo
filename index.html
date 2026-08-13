@@ -79,24 +79,24 @@ h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;letter-spac
 
 /* ============ LOGO ============ */
 .logo-img{display:block;height:40px;width:auto;}
-.nav .logo-img{height:32px;}
-footer .logo-img{height:42px;}
+.nav .logo-img{height:58px;}
+footer .logo-img{height:80px;}
 
 /* ============ NAV ============ */
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
-  padding:16px 32px;
-  background:rgba(255,255,255,0.88);
+  padding:10px 32px;
+  background:rgba(33,33,35,0.96);
   backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--linha-clara);
+  border-bottom:1px solid var(--linha-escura);
   transition:background .3s ease;
 }
 .nav .brand{display:flex;align-items:center;gap:10px;}
 .nav-links{display:flex;gap:34px;align-items:center;}
 .nav-links a{
   font-family:var(--corpo);font-size:14px;font-weight:600;
-  letter-spacing:.01em;color:var(--grafite-2);
+  letter-spacing:.01em;color:rgba(255,255,255,.8);
   position:relative;padding:4px 0;
 }
 .nav-links a::after{
@@ -104,7 +104,7 @@ footer .logo-img{height:42px;}
   background:var(--laranja);transition:width .25s ease;
 }
 .nav-links a:hover::after, .nav-links a.active::after{width:100%;}
-.nav-links a.active{color:var(--grafite);}
+.nav-links a.active{color:var(--branco);}
 .nav-cta{
   font-family:var(--corpo);font-size:14px;font-weight:700;
   background:var(--laranja);color:var(--branco);
@@ -114,7 +114,7 @@ footer .logo-img{height:42px;}
 }
 .nav-cta:hover{background:var(--dourado);color:var(--grafite);transform:translateY(-2px);box-shadow:var(--shadow-warm);}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
-.burger span{width:24px;height:2px;border-radius:var(--r-pill);background:var(--grafite);display:block;transition:.25s;}
+.burger span{width:24px;height:2px;border-radius:var(--r-pill);background:var(--branco);display:block;transition:.25s;}
 .mobile-panel{
   position:fixed;inset:0;background:var(--grafite);z-index:99;
   display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
