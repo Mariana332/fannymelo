@@ -209,24 +209,6 @@ footer .logo-mark svg{height:38px;width:auto;}
 }
 .divider.on-dark{color:var(--dourado);}
 
-/* ============ PLACEHOLDER DE FOTO ============ */
-.photo-placeholder{
-  position:relative;width:100%;height:100%;
-  background:
-    repeating-linear-gradient(115deg, rgba(255,108,0,.10) 0 2px, transparent 2px 34px),
-    linear-gradient(160deg, #2b2b2d 0%, var(--grafite) 60%);
-  display:flex;align-items:center;justify-content:center;
-}
-.photo-placeholder .ph-inner{
-  display:flex;flex-direction:column;align-items:center;gap:10px;
-  color:rgba(255,255,255,.5);
-}
-.photo-placeholder svg{width:34px;height:34px;opacity:.85;}
-.photo-placeholder span{
-  font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
-  color:rgba(255,255,255,.45);text-align:center;max-width:160px;
-}
-
 /* ============ QUEM É FANNY ============ */
 .bio{padding:110px 0;background:var(--branco);}
 .bio-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start;}
@@ -236,6 +218,12 @@ footer .logo-mark svg{height:38px;width:auto;}
   background:var(--grafite);
   border-radius:2px;
   overflow:hidden;
+}
+.bio-visual img{width:100%;height:100%;object-fit:cover;display:block;}
+.bio-visual::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg, rgba(20,20,21,.6) 0%, rgba(20,20,21,0) 32%);
+  pointer-events:none;
 }
 .bio-visual .tag{
   position:absolute;left:22px;bottom:22px;z-index:2;
@@ -324,6 +312,15 @@ footer .logo-mark svg{height:38px;width:auto;}
 .gallery-strip figure{
   position:relative;aspect-ratio:3/4;overflow:hidden;margin:0;background:var(--grafite);
 }
+.gallery-strip img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .6s cubic-bezier(.2,.7,.2,1);
+}
+.gallery-strip figure:hover img{transform:scale(1.05);}
+.gallery-strip figure::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg, rgba(20,20,21,.65) 0%, rgba(20,20,21,0) 40%);
+}
 .gallery-strip figcaption{
   position:absolute;left:18px;bottom:16px;right:18px;
   font-family:var(--mono);color:var(--branco);font-size:12px;letter-spacing:.04em;
@@ -377,6 +374,12 @@ footer .logo-mark svg{height:38px;width:auto;}
 .join-photo{
   position:relative;aspect-ratio:4/5;border-radius:2px;overflow:hidden;background:var(--grafite);
   margin-bottom:28px;max-width:340px;
+}
+.join-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.join-photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg, rgba(20,20,21,.55) 0%, rgba(20,20,21,0) 30%);
+  pointer-events:none;
 }
 .join-photo .tag{
   position:absolute;left:20px;bottom:18px;z-index:2;
@@ -526,12 +529,7 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
 <section class="bio" id="quem-e-fanny">
   <div class="wrap bio-grid">
     <div class="bio-visual reveal">
-      <div class="photo-placeholder">
-        <div class="ph-inner">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-          <span>Foto da Fanny em breve</span>
-        </div>
-      </div>
+      <img src="assets/bio-fanny.jpg" alt="Fanny Melo, pré-candidata a Deputada Federal por Minas Gerais">
       <span class="tag">Fanny Melo</span>
     </div>
     <div class="bio-text">
@@ -632,30 +630,15 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
 <section class="gallery-section">
   <div class="gallery-strip">
     <figure class="reveal">
-      <div class="photo-placeholder">
-        <div class="ph-inner">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-          <span>Foto em breve</span>
-        </div>
-      </div>
+      <img src="assets/gallery-1.jpg" alt="Fanny Melo em retrato institucional">
       <figcaption>Perto das pessoas</figcaption>
     </figure>
     <figure class="reveal">
-      <div class="photo-placeholder">
-        <div class="ph-inner">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-          <span>Foto em breve</span>
-        </div>
-      </div>
+      <img src="assets/gallery-2.jpg" alt="Fanny Melo caminhando pelo centro de Araxá">
       <figcaption>Nas ruas de Minas</figcaption>
     </figure>
     <figure class="reveal">
-      <div class="photo-placeholder">
-        <div class="ph-inner">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-          <span>Foto em breve</span>
-        </div>
-      </div>
+      <img src="assets/gallery-3.jpg" alt="Fanny Melo em pose institucional">
       <figcaption>Ouvindo quem mais precisa</figcaption>
     </figure>
   </div>
@@ -720,12 +703,7 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
   <div class="wrap join-grid">
     <div class="join-copy">
       <div class="join-photo reveal">
-        <div class="photo-placeholder">
-          <div class="ph-inner">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-            <span>Foto da Fanny em breve</span>
-          </div>
-        </div>
+        <img src="assets/join-fanny.jpg" alt="Fanny Melo, pré-candidata a Deputada Federal">
         <span class="tag">Fanny Melo</span>
       </div>
       <div class="eyebrow reveal">Junte-se ao movimento</div>
