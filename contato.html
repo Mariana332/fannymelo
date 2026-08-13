@@ -52,9 +52,9 @@ footer .logo-img{height:80px;}
 .nav-cta:hover{background:var(--dourado);color:var(--grafite);transform:translateY(-2px);box-shadow:var(--shadow-warm);}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
 .burger span{width:24px;height:2px;border-radius:var(--r-pill);background:var(--branco);display:block;transition:.25s;}
-.mobile-panel{position:fixed;inset:0;background:var(--grafite);z-index:99;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:32px;gap:28px;transform:translateY(-100%);transition:transform .4s cubic-bezier(.2,.8,.2,1);}
+.mobile-panel{position:fixed;inset:0;background:var(--grafite);z-index:99;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:32px;gap:20px;transform:translateY(-100%);transition:transform .4s cubic-bezier(.2,.8,.2,1);}
 .mobile-panel.open{transform:translateY(0);}
-.mobile-panel a{font-family:var(--display);font-size:36px;color:var(--branco);font-weight:700;}
+.mobile-panel a{font-family:var(--display);font-size:24px;color:var(--branco);font-weight:700;}
 .mobile-panel a span{color:var(--laranja);}
 @media (max-width:900px){.nav-links{display:none;}.nav-cta{display:none;}.burger{display:flex;}}
 
@@ -160,7 +160,7 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
           Facebook
         </a>
         <a class="social-pill" href="https://wa.me/5534991037599" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.6L4 20z"/><path d="M9 10.5c.3 2 2.2 3.9 4.2 4.2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.24 0 4.35.87 5.93 2.46a8.23 8.23 0 0 1 2.42 5.86c0 4.57-3.72 8.29-8.31 8.29a8.27 8.27 0 0 1-4.22-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.27-4.4c0-4.58 3.73-8.35 8.24-8.35M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.25 3.73.6.24 1.06.39 1.42.5.6.19 1.14.16 1.57.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.47-.28-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.36-.78-1.86-.2-.48-.4-.42-.56-.42h-.47Z"/></svg>
           WhatsApp
         </a>
       </div>
@@ -184,7 +184,7 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
         </div>
         <button type="submit" class="btn btn-primary">Quero apoiar</button>
       </form>
-      <p class="form-note">Ao se cadastrar, você concorda em receber comunicações sobre a pré-candidatura de Fanny Melo pelo WhatsApp. Este formulário ainda precisa ser conectado a um serviço de envio antes de entrar no ar.</p>
+      <p class="form-note">Ao enviar, você será direcionado ao WhatsApp com uma mensagem pronta para confirmar seu apoio à pré-candidatura de Fanny Melo.</p>
     </div>
   </div>
 </section>
@@ -213,13 +213,13 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 8h2V4h-2a4 4 0 0 0-4 4v2H8v4h2v6h4v-6h2.5l.5-4H14V8z"/></svg>Facebook
           </a>
           <a href="https://wa.me/5534991037599" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.6L4 20z"/><path d="M9 10.5c.3 2 2.2 3.9 4.2 4.2"/></svg>WhatsApp
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.24 0 4.35.87 5.93 2.46a8.23 8.23 0 0 1 2.42 5.86c0 4.57-3.72 8.29-8.31 8.29a8.27 8.27 0 0 1-4.22-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.27-4.4c0-4.58 3.73-8.35 8.24-8.35M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.25 3.73.6.24 1.06.39 1.42.5.6.19 1.14.16 1.57.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.47-.28-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.36-.78-1.86-.2-.48-.4-.42-.56-.42h-.47Z"/></svg>WhatsApp
           </a>
         </div>
         <div class="footer-col">
           <h4>Contato</h4>
           <a href="https://wa.me/5534991037599" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.6L4 20z"/></svg>(34) 99103-7599
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.24 0 4.35.87 5.93 2.46a8.23 8.23 0 0 1 2.42 5.86c0 4.57-3.72 8.29-8.31 8.29a8.27 8.27 0 0 1-4.22-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.27-4.4c0-4.58 3.73-8.35 8.24-8.35M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.25 3.73.6.24 1.06.39 1.42.5.6.19 1.14.16 1.57.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.47-.28-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.36-.78-1.86-.2-.48-.4-.42-.56-.42h-.47Z"/></svg>(34) 99103-7599
           </a>
           <p>Araxá, Minas Gerais</p>
         </div>
@@ -269,7 +269,16 @@ document.querySelectorAll('section').forEach(section => {
 
 document.getElementById('apoioForm').addEventListener('submit', function(e){
   e.preventDefault();
-  alert('Obrigado pelo apoio! (Formulário ainda não conectado a um serviço de envio — configure antes do lançamento.)');
+  const nome = document.getElementById('nome').value.trim();
+  const cidade = document.getElementById('cidade').value.trim();
+  const whatsapp = document.getElementById('whatsapp').value.trim();
+  const numeroFanny = '5534991037599';
+  let msg = 'Olá! Quero apoiar a pré-candidatura de Fanny Melo.';
+  msg += '\nNome: ' + nome;
+  if (cidade) msg += '\nCidade: ' + cidade;
+  msg += '\nMeu WhatsApp: ' + whatsapp;
+  const url = 'https://wa.me/' + numeroFanny + '?text=' + encodeURIComponent(msg);
+  window.open(url, '_blank', 'noopener');
   this.reset();
 });
 </script>

@@ -66,6 +66,8 @@ ul{list-style:none;}
   background:currentColor;
   display:inline-block;
 }
+.mobile-break{display:none;}
+@media (max-width:640px){.mobile-break{display:inline;}}
 h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;letter-spacing:-.01em;}
 
 .dot-ic{width:9px;height:9px;border-radius:50%;background:var(--laranja);display:inline-block;flex-shrink:0;}
@@ -120,12 +122,12 @@ footer .logo-img{height:80px;}
 .mobile-panel{
   position:fixed;inset:0;background:var(--grafite);z-index:99;
   display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
-  padding:32px;gap:28px;
+  padding:32px;gap:20px;
   transform:translateY(-100%);transition:transform .4s cubic-bezier(.2,.8,.2,1);
 }
 .mobile-panel.open{transform:translateY(0);}
 .mobile-panel a{
-  font-family:var(--display);font-size:36px;color:var(--branco);font-weight:700;
+  font-family:var(--display);font-size:24px;color:var(--branco);font-weight:700;
 }
 .mobile-panel a span{color:var(--laranja);}
 
@@ -323,7 +325,6 @@ footer .logo-img{height:80px;}
   font-family:var(--mono);color:var(--branco);font-size:12px;letter-spacing:.04em;
   z-index:2;
 }
-.carousel-controls{display:flex;align-items:center;gap:18px;}
 .carousel-arrows{display:flex;gap:10px;}
 .carousel-arrow{
   width:46px;height:46px;border-radius:50%;background:var(--off-white);border:none;cursor:pointer;
@@ -332,10 +333,11 @@ footer .logo-img{height:80px;}
 }
 .carousel-arrow:hover{background:var(--laranja);color:var(--branco);transform:scale(1.08);}
 .carousel-arrow:disabled{opacity:.35;cursor:default;pointer-events:none;}
+.carousel-dots-row{display:flex;justify-content:center;margin-top:18px;}
 .carousel-dots{display:flex;gap:8px;}
 .carousel-dots span{width:7px;height:7px;border-radius:50%;background:var(--linha-clara);transition:.25s ease;}
 .carousel-dots span.active{background:var(--laranja);width:20px;border-radius:var(--r-pill);}
-@media (max-width:640px){.carousel-controls{display:none;}}
+@media (max-width:640px){.carousel-arrows{display:none;}}
 
 /* ============ TRAJETÓRIA ============ */
 .timeline-section{background:var(--grafite);color:var(--branco);padding:100px 0;}
@@ -494,7 +496,7 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
   <div class="hero-bg"><img src="assets/hero-fanny.jpg" alt="Fanny Melo caminhando em uma rua de Minas Gerais, acenando"></div>
   <div class="hero-blobs"><div class="b1"></div><div class="b2"></div></div>
   <div class="wrap hero-inner">
-    <div class="eyebrow reveal">Pré-candidata a Deputada Federal · Minas Gerais</div>
+    <div class="eyebrow reveal">Pré-candidata a<br class="mobile-break"> Deputada Federal · Minas Gerais</div>
     <h1 class="reveal">Você não está cansado <span class="hl">de trabalhar.</span></h1>
     <p class="lede reveal">
       Está cansado é de se esforçar tanto e não ver resultado. De violência crescente, de educação e
@@ -568,40 +570,40 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
   <div class="wrap">
     <div class="gallery-head-row">
       <div class="section-head reveal" style="margin-bottom:0;">
-        <div class="eyebrow">Mais de Fanny</div>
-        <h2 style="font-size:clamp(26px,3vw,36px);">Fanny pelas ruas de Araxá</h2>
+        <div class="eyebrow">Pré-candidatura</div>
+        <h2 style="font-size:clamp(26px,3vw,36px);">Uma pré-candidatura com propósito</h2>
       </div>
-      <div class="carousel-controls reveal">
-        <div class="carousel-dots" id="galDots"></div>
-        <div class="carousel-arrows">
-          <button class="carousel-arrow" id="galPrev" aria-label="Foto anterior">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <button class="carousel-arrow" id="galNext" aria-label="Próxima foto">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
-        </div>
+      <div class="carousel-arrows reveal">
+        <button class="carousel-arrow" id="galPrev" aria-label="Foto anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-arrow" id="galNext" aria-label="Próxima foto">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
       </div>
     </div>
     <div class="carousel">
       <div class="carousel-track" id="galTrack">
         <figure class="reveal">
           <img src="assets/gallery-2.jpg" alt="Fanny Melo caminhando pelo centro de Araxá, Minas Gerais">
-          <figcaption>Nas ruas de Araxá</figcaption>
+          <figcaption>Proximidade</figcaption>
         </figure>
         <figure class="reveal">
           <img src="assets/gallery-4.jpg" alt="Fanny Melo na Feira Semente Criativa, em Araxá">
-          <figcaption>Na Feira Semente Criativa</figcaption>
+          <figcaption>Compromisso</figcaption>
         </figure>
         <figure class="reveal">
           <img src="assets/gallery-3.jpg" alt="Fanny Melo com o Cristo de Araxá ao fundo">
-          <figcaption>Araxá, terra natal</figcaption>
+          <figcaption>Determinação</figcaption>
         </figure>
         <figure class="reveal">
           <img src="assets/gallery-1.jpg" alt="Fanny Melo em retrato institucional">
-          <figcaption>Retrato oficial</figcaption>
+          <figcaption>Coragem</figcaption>
         </figure>
       </div>
+    </div>
+    <div class="carousel-dots-row">
+      <div class="carousel-dots" id="galDots"></div>
     </div>
   </div>
 </section>
@@ -633,14 +635,14 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
             Facebook
           </a>
           <a href="https://wa.me/5534991037599" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.6L4 20z"/><path d="M9 10.5c.3 2 2.2 3.9 4.2 4.2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.24 0 4.35.87 5.93 2.46a8.23 8.23 0 0 1 2.42 5.86c0 4.57-3.72 8.29-8.31 8.29a8.27 8.27 0 0 1-4.22-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.27-4.4c0-4.58 3.73-8.35 8.24-8.35M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.25 3.73.6.24 1.06.39 1.42.5.6.19 1.14.16 1.57.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.47-.28-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.36-.78-1.86-.2-.48-.4-.42-.56-.42h-.47Z"/></svg>
             WhatsApp
           </a>
         </div>
         <div class="footer-col">
           <h4>Contato</h4>
           <a href="https://wa.me/5534991037599" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.6L4 20z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.24 0 4.35.87 5.93 2.46a8.23 8.23 0 0 1 2.42 5.86c0 4.57-3.72 8.29-8.31 8.29a8.27 8.27 0 0 1-4.22-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.27-4.4c0-4.58 3.73-8.35 8.24-8.35M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.25 3.73.6.24 1.06.39 1.42.5.6.19 1.14.16 1.57.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.47-.28-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.36-.78-1.86-.2-.48-.4-.42-.56-.42h-.47Z"/></svg>
             (34) 99103-7599
           </a>
           <p>Araxá, Minas Gerais</p>
