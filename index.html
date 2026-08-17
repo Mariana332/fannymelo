@@ -3,465 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fanny Melo | Pré-candidata a Deputada Federal</title>
-<meta name="description" content="Fanny Melo — 23 anos defendendo mulheres, crianças, idosos e quem mais precisa de Justiça. Pré-candidata a Deputada Federal por Minas Gerais.">
+<title>Fanny Melo | Candidata a Deputada Federal</title>
+<meta name="description" content="Fanny Melo — 23 anos defendendo mulheres, crianças, idosos e quem mais precisa de Justiça. Candidata a Deputada Federal por Minas Gerais.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23A265D2'/%3E%3Ccircle cx='32' cy='34' r='16' fill='%2300A859'/%3E%3Ccircle cx='58' cy='58' r='16' fill='%23FFB901'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<style>
-/* ============ TOKENS ============ */
-:root{
-  --branco:#FFFFFF;
-  --off-white:#FAF7F2;
-  --grafite:#A265D2;
-  --grafite-2:#38383a;
-  --grafite-3:#6d6d70;
-  --laranja:#01D59B;
-  --laranja-escuro:#01A074;
-  --laranja-fumo:#E5FAF3;
-  --dourado:#FFB901;
-  --linha-clara: rgba(162,101,210,0.10);
-  --linha-escura: rgba(255,255,255,0.14);
-  --display: 'Poppins', sans-serif;
-  --corpo: 'Montserrat', sans-serif;
-  --mono: 'IBM Plex Mono', monospace;
-  --container: 1180px;
-  --r-sm: 12px;
-  --r-md: 18px;
-  --r-lg: 26px;
-  --r-pill: 999px;
-  --shadow-sm: 0 2px 10px rgba(162,101,210,.06);
-  --shadow-md: 0 14px 34px rgba(162,101,210,.12);
-  --shadow-warm: 0 14px 30px rgba(1,213,155,.28);
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  font-family:var(--corpo);
-  color:var(--grafite);
-  background:var(--branco);
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-img{max-width:100%;display:block;}
-a{color:inherit;text-decoration:none;}
-ul{list-style:none;}
-.wrap{max-width:var(--container);margin:0 auto;padding:0 32px;}
-@media (max-width:640px){.wrap{padding:0 22px;}}
-
-.eyebrow{
-  font-family:var(--mono);
-  font-size:12.5px;
-  font-weight:600;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-}
-.eyebrow::before{
-  content:"";
-  width:9px;height:9px;border-radius:50%;
-  background:currentColor;
-  display:inline-block;
-}
-.mobile-break{display:none;}
-@media (max-width:640px){.mobile-break{display:inline;}}
-h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;letter-spacing:-.01em;}
-
-.dot-ic{width:9px;height:9px;border-radius:50%;background:var(--laranja);display:inline-block;flex-shrink:0;}
-
-.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--laranja),var(--dourado));z-index:200;}
-
-/* reveal on scroll */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1);}
-.reveal.in{opacity:1;transform:translateY(0);}
-@media (prefers-reduced-motion: reduce){
-  .reveal{opacity:1;transform:none;transition:none;}
-}
-
-/* ============ LOGO ============ */
-.logo-img{display:block;height:40px;width:auto;}
-.nav .logo-img{height:56px;}
-footer .logo-img{height:76px;}
-
-/* ============ NAV ============ */
-.nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:10px 32px;
-  background:rgba(162,101,210,0.96);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--linha-escura);
-  transition:background .3s ease;
-}
-.nav .brand{display:flex;align-items:center;gap:10px;}
-.nav-links{display:flex;gap:34px;align-items:center;}
-.nav-links a{
-  font-family:var(--corpo);font-size:14px;font-weight:600;
-  letter-spacing:.01em;color:rgba(255,255,255,.8);
-  position:relative;padding:4px 0;
-}
-.nav-links a::after{
-  content:"";position:absolute;left:0;bottom:0;height:2px;width:0;border-radius:var(--r-pill);
-  background:var(--laranja);transition:width .25s ease;
-}
-.nav-links a:hover::after, .nav-links a.active::after{width:100%;}
-.nav-links a.active{color:var(--branco);}
-.nav-cta{
-  font-family:var(--corpo);font-size:14px;font-weight:700;
-  background:var(--laranja);color:var(--branco);
-  padding:12px 22px;border-radius:var(--r-pill);letter-spacing:.01em;
-  transition:background .2s ease, transform .2s ease, box-shadow .2s ease;
-  white-space:nowrap;
-}
-.nav-cta:hover{background:var(--dourado);color:var(--grafite);transform:translateY(-2px);box-shadow:var(--shadow-warm);}
-.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
-.burger span{width:24px;height:2px;border-radius:var(--r-pill);background:var(--branco);display:block;transition:.25s;}
-.mobile-panel{
-  position:fixed;inset:0;background:var(--grafite);z-index:99;
-  display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
-  padding:32px;gap:20px;
-  transform:translateY(-100%);transition:transform .4s cubic-bezier(.2,.8,.2,1);
-}
-.mobile-panel.open{transform:translateY(0);}
-.mobile-panel a{
-  font-family:var(--display);font-size:24px;color:var(--branco);font-weight:700;
-}
-.mobile-panel a span{color:var(--laranja);}
-
-@media (max-width:900px){
-  .nav-links{display:none;}
-  .nav-cta{display:none;}
-  .burger{display:flex;}
-}
-
-/* ============ HERO ============ */
-.hero{
-  position:relative;
-  background:var(--grafite);
-  color:var(--branco);
-  padding:168px 0 96px;
-  overflow:hidden;
-}
-.hero-bg{position:absolute;inset:0;z-index:0;}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:62% 3%;}
-.hero-bg::after{
-  content:"";position:absolute;inset:0;
-  background:
-    linear-gradient(90deg, rgba(20,20,21,.97) 0%, rgba(20,20,21,.88) 32%, rgba(20,20,21,.55) 62%, rgba(20,20,21,.35) 100%),
-    linear-gradient(0deg, rgba(20,20,21,.75) 0%, rgba(20,20,21,0) 34%);
-}
-.hero-blobs{position:absolute;top:-10%;right:-8%;width:640px;max-width:70vw;height:640px;pointer-events:none;z-index:1;}
-.hero-blobs .b1{position:absolute;top:0;right:60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle at 35% 30%, rgba(0,168,89,.55), rgba(0,168,89,0) 70%);filter:blur(6px);}
-.hero-blobs .b2{position:absolute;top:140px;right:220px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 40% 35%, rgba(255,212,0,.5), rgba(255,212,0,0) 70%);filter:blur(6px);}
-.hero-inner{position:relative;z-index:2;max-width:880px;}
-.hero .eyebrow{color:var(--dourado);margin-bottom:26px;}
-.hero h1{font-size:clamp(38px, 6vw, 76px);color:var(--branco);}
-.hero h1 .hl{color:var(--laranja);}
-.hero p.lede{
-  font-family:var(--corpo);
-  font-size:clamp(16px,1.7vw,19px);
-  color:rgba(255,255,255,.72);
-  max-width:620px;
-  margin-top:26px;
-  line-height:1.65;
-}
-.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:44px;}
-.btn{
-  font-family:var(--corpo);font-size:14.5px;font-weight:700;letter-spacing:.01em;
-  padding:16px 28px;border-radius:var(--r-pill);display:inline-flex;align-items:center;gap:10px;
-  transition:transform .22s cubic-bezier(.2,.8,.3,1.3), background .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
-}
-.btn-primary{background:var(--laranja);color:var(--branco);}
-.btn-primary:hover{background:var(--dourado);color:var(--grafite);transform:translateY(-3px) scale(1.02);box-shadow:var(--shadow-warm);}
-.btn-outline{border:1.5px solid rgba(255,255,255,.4);color:var(--branco);}
-.btn-outline:hover{border-color:var(--branco);background:rgba(255,255,255,.08);transform:translateY(-3px) scale(1.02);}
-.hero-strip{
-  margin-top:80px;padding-top:30px;border-top:1px solid var(--linha-escura);
-  display:flex;gap:56px;flex-wrap:wrap;
-}
-.hero-strip .stat b{
-  font-family:var(--display);font-size:38px;color:var(--branco);display:block;font-weight:800;
-}
-.hero-strip .stat span{
-  font-family:var(--mono);font-size:12px;color:rgba(255,255,255,.55);
-  text-transform:uppercase;letter-spacing:.08em;
-}
-
-/* ============ divider ============ */
-.divider{display:flex;justify-content:center;align-items:center;gap:8px;padding:28px 0;}
-.divider span{width:7px;height:7px;border-radius:50%;background:var(--laranja);}
-.divider span:nth-child(2){background:var(--dourado);opacity:.75;width:6px;height:6px;}
-.divider span:nth-child(3){background:var(--laranja);opacity:.4;width:5px;height:5px;}
-.divider.on-dark span{background:var(--dourado);}
-
-/* ============ PAGE HERO (bandeiras/trajetória/contato) ============ */
-.page-hero{
-  background:var(--grafite);color:var(--branco);
-  padding:150px 0 76px;position:relative;overflow:hidden;
-}
-.page-hero .blob{position:absolute;top:-120px;right:-100px;width:420px;height:420px;border-radius:50%;
-  background:radial-gradient(circle at 35% 30%, rgba(0,168,89,.45), rgba(0,168,89,0) 70%);filter:blur(4px);pointer-events:none;}
-.page-hero .eyebrow{color:var(--dourado);margin-bottom:18px;}
-.page-hero h1{font-size:clamp(34px,4.6vw,58px);color:var(--branco);position:relative;z-index:1;}
-.page-hero p{margin-top:18px;font-size:16.5px;color:rgba(255,255,255,.65);max-width:620px;line-height:1.7;position:relative;z-index:1;}
-
-/* ============ QUEM É FANNY ============ */
-.bio{padding:100px 0 60px;background:var(--branco);}
-.bio-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start;}
-.bio-visual{
-  position:relative;aspect-ratio:4/5;background:var(--grafite);
-  border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);
-}
-.bio-visual img{width:100%;height:100%;object-fit:cover;display:block;}
-.bio-visual::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(0deg, rgba(20,20,21,.6) 0%, rgba(20,20,21,0) 32%);
-  pointer-events:none;
-}
-.bio-visual .tag{
-  position:absolute;left:22px;bottom:22px;z-index:2;
-  font-family:var(--mono);color:var(--branco);font-size:12px;
-  letter-spacing:.08em;text-transform:uppercase;
-  border-left:2px solid var(--laranja);padding-left:10px;
-}
-.bio-text .eyebrow{color:var(--laranja-escuro);margin-bottom:18px;}
-.bio-text h2{font-size:clamp(30px,3.8vw,46px);margin-bottom:26px;color:var(--grafite);}
-.bio-text p{font-size:16.5px;line-height:1.85;color:var(--grafite-2);margin-bottom:18px;}
-.bio-text p.first-word::first-letter{color:var(--laranja);}
-.bio-facts{
-  display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:38px;
-  padding-top:32px;border-top:1px solid var(--linha-clara);
-}
-.bio-facts div{display:flex;gap:14px;align-items:flex-start;}
-.bio-facts .dot-ic{margin-top:7px;}
-.bio-facts p{font-size:14.5px;color:var(--grafite-3);margin:0;line-height:1.5;}
-.bio-facts b{display:block;font-family:var(--corpo);color:var(--grafite);font-size:15px;margin-bottom:2px;font-weight:700;}
-
-@media (max-width:900px){
-  .bio-grid{grid-template-columns:1fr;}
-  .bio-facts{grid-template-columns:1fr;}
-}
-
-/* ============ QUOTE BLOCK ============ */
-.quote-block{
-  background:var(--laranja);color:var(--branco);
-  padding:90px 0;position:relative;overflow:hidden;
-  border-radius:var(--r-lg);max-width:calc(var(--container) + 64px);margin:20px auto 0;
-}
-.quote-block .wrap{max-width:1000px;}
-.quote-block blockquote{
-  font-family:var(--display);font-weight:800;
-  font-size:clamp(28px,4.2vw,52px);
-  line-height:1.12;max-width:960px;letter-spacing:-.01em;
-}
-.quote-block cite{
-  display:block;margin-top:30px;font-style:normal;
-  font-family:var(--mono);font-size:13px;letter-spacing:.05em;
-  text-transform:uppercase;color:rgba(255,255,255,.85);
-}
-.quote-mark{
-  position:absolute;font-family:var(--display);font-weight:900;
-  font-size:380px;color:rgba(255,255,255,.14);top:-120px;right:0;
-  line-height:1;pointer-events:none;
-}
-
-/* ============ BANDEIRAS ============ */
-.pillars{padding:100px 0;background:var(--off-white);}
-.section-head{max-width:680px;margin-bottom:56px;}
-.section-head .eyebrow{color:var(--laranja-escuro);margin-bottom:18px;}
-.section-head h2{font-size:clamp(30px,3.8vw,46px);color:var(--grafite);}
-.section-head p{margin-top:18px;font-size:16px;color:var(--grafite-3);line-height:1.7;}
-
-.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.pillar-card{
-  background:var(--branco);padding:34px 30px;min-height:250px;border-radius:var(--r-md);
-  display:flex;flex-direction:column;gap:16px;box-shadow:var(--shadow-sm);
-  transition:transform .25s cubic-bezier(.2,.8,.3,1.2), box-shadow .25s ease;
-}
-.pillar-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);}
-.pillar-card .ic-circle{
-  width:44px;height:44px;border-radius:50%;background:var(--laranja-fumo);
-  display:flex;align-items:center;justify-content:center;color:var(--laranja-escuro);
-  transition:transform .3s cubic-bezier(.3,.8,.4,1.4);
-}
-.pillar-card:hover .ic-circle{transform:scale(1.12) rotate(-6deg);}
-.pillar-card h3{
-  font-family:var(--display);font-size:21px;font-weight:700;color:var(--grafite);
-  letter-spacing:0;line-height:1.2;
-}
-.pillar-card p{font-size:14.5px;color:var(--grafite-3);line-height:1.65;}
-
-@media (max-width:900px){.pillars-grid{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:640px){.pillars-grid{grid-template-columns:1fr;}}
-
-/* ============ GALERIA / CARROSSEL ============ */
-.gallery-section{background:var(--branco);padding:20px 0 100px;}
-.gallery-head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:30px;}
-.carousel{position:relative;}
-.carousel-track{
-  display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;
-  padding:4px 4px 12px;margin:-4px -4px 0;
-  scrollbar-width:none;-ms-overflow-style:none;
-}
-.carousel-track::-webkit-scrollbar{display:none;}
-.carousel-track figure{
-  position:relative;flex:0 0 auto;width:min(78vw,300px);aspect-ratio:3/4;overflow:hidden;margin:0;
-  background:var(--grafite);border-radius:var(--r-md);box-shadow:var(--shadow-sm);scroll-snap-align:start;
-}
-.carousel-track img{
-  width:100%;height:100%;object-fit:cover;display:block;
-  transition:transform .6s cubic-bezier(.2,.7,.2,1);
-}
-.carousel-track figure:hover img{transform:scale(1.06);}
-.carousel-track figure::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(0deg, rgba(20,20,21,.62) 0%, rgba(20,20,21,0) 42%);
-}
-.carousel-track figcaption{
-  position:absolute;left:18px;bottom:16px;right:18px;
-  font-family:var(--mono);color:var(--branco);font-size:12px;letter-spacing:.04em;
-  z-index:2;
-}
-.carousel-arrows{display:flex;gap:10px;}
-.carousel-arrow{
-  width:46px;height:46px;border-radius:50%;background:var(--off-white);border:none;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;color:var(--grafite);
-  transition:background .25s ease, color .25s ease, transform .25s ease;
-}
-.carousel-arrow:hover{background:var(--laranja);color:var(--branco);transform:scale(1.08);}
-.carousel-arrow:disabled{opacity:.35;cursor:default;pointer-events:none;}
-.carousel-dots-row{display:flex;justify-content:center;margin-top:18px;}
-.carousel-dots{display:flex;gap:8px;}
-.carousel-dots span{width:7px;height:7px;border-radius:50%;background:var(--linha-clara);transition:.25s ease;}
-.carousel-dots span.active{background:var(--laranja);width:20px;border-radius:var(--r-pill);}
-@media (max-width:640px){.carousel-arrows{display:none;}}
-
-/* ============ TRAJETÓRIA ============ */
-.timeline-section{background:var(--grafite);color:var(--branco);padding:100px 0;}
-.timeline-section .eyebrow{color:var(--dourado);margin-bottom:18px;}
-.timeline-section .section-head h2{color:var(--branco);}
-.timeline-section .section-head p{color:rgba(255,255,255,.6);}
-
-.timeline{margin-top:60px;position:relative;}
-.timeline::before{
-  content:"";position:absolute;left:22px;top:8px;bottom:8px;width:2px;border-radius:var(--r-pill);
-  background:linear-gradient(var(--linha-escura),var(--linha-escura));
-}
-.t-item{display:grid;grid-template-columns:46px 1fr;gap:28px;padding-bottom:52px;position:relative;}
-.t-item:last-child{padding-bottom:0;}
-.t-dot{
-  width:46px;height:46px;border-radius:50%;background:var(--grafite);
-  border:1px solid var(--linha-escura);
-  display:flex;align-items:center;justify-content:center;
-  position:relative;z-index:2;transition:transform .3s ease, background .3s ease;
-}
-.t-dot .dot-ic{width:11px;height:11px;background:var(--laranja);}
-.t-item:hover .t-dot{transform:scale(1.15);background:var(--laranja);}
-.t-body .t-year{
-  font-family:var(--mono);font-size:12.5px;color:var(--dourado);
-  letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;display:block;
-}
-.t-body h3{font-family:var(--display);font-weight:700;font-size:24px;margin-bottom:10px;}
-.t-body p{font-size:15px;color:rgba(255,255,255,.62);line-height:1.7;max-width:640px;}
-
-@media (max-width:640px){
-  .timeline::before{left:18px;}
-  .t-item{grid-template-columns:38px 1fr;gap:18px;}
-  .t-dot{width:38px;height:38px;}
-}
-
-/* ============ JUNTE-SE / CONTATO ============ */
-.join{padding:96px 0 110px;background:var(--branco);}
-.join-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start;}
-.join-photo{
-  position:relative;aspect-ratio:4/5;border-radius:var(--r-lg);overflow:hidden;background:var(--grafite);
-  margin-bottom:28px;max-width:340px;box-shadow:var(--shadow-md);
-}
-.join-photo img{width:100%;height:100%;object-fit:cover;display:block;}
-.join-photo::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(0deg, rgba(20,20,21,.55) 0%, rgba(20,20,21,0) 30%);
-  pointer-events:none;
-}
-.join-photo .tag{
-  position:absolute;left:20px;bottom:18px;z-index:2;
-  font-family:var(--mono);color:var(--branco);font-size:11.5px;
-  letter-spacing:.08em;text-transform:uppercase;
-  border-left:2px solid var(--laranja);padding-left:9px;
-}
-.join-copy .eyebrow{color:var(--laranja-escuro);margin-bottom:18px;}
-.join-copy h2{font-size:clamp(30px,3.8vw,44px);color:var(--grafite);margin-bottom:22px;}
-.join-copy p{font-size:16px;color:var(--grafite-3);line-height:1.75;margin-bottom:28px;max-width:480px;}
-.social-row{display:flex;gap:14px;flex-wrap:wrap;}
-.social-pill{
-  font-family:var(--corpo);font-size:14px;font-weight:600;
-  background:var(--off-white);padding:13px 20px;border-radius:var(--r-pill);
-  display:inline-flex;align-items:center;gap:10px;color:var(--grafite-2);
-  transition:.25s cubic-bezier(.2,.8,.3,1.2);
-}
-.social-pill svg{width:18px;height:18px;flex-shrink:0;}
-.social-pill:hover{background:var(--laranja);color:var(--branco);transform:translateY(-3px);box-shadow:var(--shadow-warm);}
-
-.form-card{
-  background:var(--off-white);
-  padding:40px;border-radius:var(--r-lg);box-shadow:var(--shadow-sm);
-}
-.form-card .form-eyebrow{
-  font-family:var(--mono);font-size:12px;color:var(--laranja-escuro);
-  text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;display:block;
-}
-.form-card h3{font-family:var(--display);font-size:24px;color:var(--grafite);margin-bottom:22px;font-weight:700;}
-.field{margin-bottom:18px;}
-.field label{
-  display:block;font-family:var(--mono);font-size:11.5px;color:var(--grafite-3);
-  text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;
-}
-.field input,.field textarea{
-  width:100%;padding:14px 16px;border:1.5px solid var(--linha-clara);
-  background:var(--branco);font-family:var(--corpo);font-size:14.5px;color:var(--grafite);
-  border-radius:var(--r-sm);transition:border-color .2s ease, box-shadow .2s ease;
-}
-.field input:focus,.field textarea:focus{outline:none;border-color:var(--laranja);box-shadow:0 0 0 4px var(--laranja-fumo);}
-.field textarea{resize:vertical;min-height:90px;}
-.form-card .btn-primary{width:100%;justify-content:center;border:none;cursor:pointer;font-size:14.5px;}
-.form-note{font-size:12.5px;color:var(--grafite-3);margin-top:14px;line-height:1.5;}
-
-@media (max-width:900px){.join-grid{grid-template-columns:1fr;}}
-
-/* ============ FOOTER ============ */
-footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px;}
-.footer-top{
-  display:flex;justify-content:space-between;align-items:flex-start;
-  padding-bottom:44px;border-bottom:1px solid var(--linha-escura);flex-wrap:wrap;gap:32px;
-}
-.footer-top .slogan{
-  font-family:var(--display);font-size:19px;color:var(--branco);font-weight:700;max-width:280px;line-height:1.2;
-  margin-top:14px;
-}
-.footer-cols{display:flex;gap:70px;flex-wrap:wrap;}
-.footer-col h4{
-  font-family:var(--mono);font-size:12px;color:var(--dourado);text-transform:uppercase;
-  letter-spacing:.08em;margin-bottom:16px;
-}
-.footer-col a, .footer-col p{
-  display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.62);margin-bottom:10px;line-height:1.5;
-}
-.footer-col a:hover{color:var(--branco);}
-.footer-col svg{width:15px;height:15px;flex-shrink:0;}
-.footer-bottom{
-  padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;
-  font-family:var(--mono);font-size:11.5px;color:rgba(255,255,255,.4);
-}
-.footer-legal{max-width:760px;line-height:1.6;}
-
-@media (max-width:640px){
-  .footer-top{flex-direction:column;}
-  .footer-cols{gap:40px;}
-}
-</style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
@@ -491,26 +39,38 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
   <a href="contato.html">Cont<span>a</span>to</a>
 </div>
 
+<div class="mobile-action-bar">
+  <a class="mab-btn mab-whats" href="https://wa.me/5534991037599" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.24 0 4.35.87 5.93 2.46a8.23 8.23 0 0 1 2.42 5.86c0 4.57-3.72 8.29-8.31 8.29a8.27 8.27 0 0 1-4.22-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.27-4.4c0-4.58 3.73-8.35 8.24-8.35M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.25 3.73.6.24 1.06.39 1.42.5.6.19 1.14.16 1.57.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.47-.28-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.36-.78-1.86-.2-.48-.4-.42-.56-.42h-.47Z"/></svg>
+    WhatsApp
+  </a>
+  <a class="mab-btn mab-primary" href="contato.html#redes">Junte-se ao movimento</a>
+</div>
+
 <!-- ============ HERO ============ -->
 <section class="hero" id="topo">
   <div class="hero-bg"><img src="assets/hero-fanny.jpg" alt="Fanny Melo caminhando em uma rua de Minas Gerais, acenando"></div>
   <div class="hero-blobs"><div class="b1"></div><div class="b2"></div></div>
   <div class="wrap hero-inner">
-    <div class="eyebrow reveal">Pré-candidata a<br class="mobile-break"> Deputada Federal ·<br class="mobile-break"> Minas Gerais</div>
-    <h1 class="reveal">Você não está cansado <span class="hl">de trabalhar.</span></h1>
+    <div class="eyebrow reveal">Candidata a<br class="mobile-break"> Deputada Federal ·<br class="mobile-break"> Minas Gerais</div>
+    <h1 class="reveal" data-split>Você não está cansado <span class="hl">de trabalhar…</span></h1>
     <p class="lede reveal">
-      Está cansado é de se esforçar tanto e não ver resultado. De violência crescente, de educação e
-      saúde de qualidade não serem para todos, e do salário de quem trabalha honestamente valer cada vez menos.
-      Eu também me cansei de tudo isso.
+      Está cansado de se esforçar tanto e não ver resultado! De ter que conviver com a violência, com
+      saúde e educação que não chegam a todos e de ver que o salário de quem trabalha honestamente
+      vale cada vez menos.
     </p>
     <div class="hero-ctas reveal">
       <a href="#quem-e-fanny" class="btn btn-primary">Conheça a história de Fanny</a>
       <a href="contato.html#redes" class="btn btn-outline">Siga nas redes</a>
     </div>
+    <div class="ballot-badge reveal">
+      <span class="ballot-num">2060</span>
+      <span class="ballot-txt">Esse é o número<br>pra votar em Fanny</span>
+    </div>
     <div class="hero-strip reveal">
-      <div class="stat"><b>23</b><span>Anos no Ministério Público de MG</span></div>
-      <div class="stat"><b>02+02</b><span>Filhos e filhas de coração</span></div>
-      <div class="stat"><b>01</b><span>Voz de quem acorda cedo e trabalha duro</span></div>
+      <div class="stat"><b><span class="count" data-count="23">0</span></b><span>Anos no Ministério Público de MG</span></div>
+      <div class="stat"><b><span class="count" data-count="2" data-pad="2">00</span>+<span class="count" data-count="2" data-pad="2">00</span></b><span>Filhos e filhas de coração</span></div>
+      <div class="stat"><b><span class="count" data-count="1" data-pad="2">00</span></b><span>Voz de quem acorda cedo e trabalha duro</span></div>
     </div>
   </div>
 </section>
@@ -520,26 +80,23 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
 <!-- ============ QUEM É FANNY ============ -->
 <section class="bio" id="quem-e-fanny">
   <div class="wrap bio-grid">
-    <div class="bio-visual reveal">
-      <img src="assets/bio-fanny.jpg" alt="Fanny Melo, pré-candidata a Deputada Federal por Minas Gerais">
+    <div class="bio-visual reveal img-reveal">
+      <img src="assets/bio-fanny.jpg" alt="Fanny Melo, candidata a Deputada Federal por Minas Gerais">
       <span class="tag">Fanny Melo</span>
     </div>
     <div class="bio-text">
       <div class="eyebrow reveal">Quem é Fanny</div>
-      <h2 class="reveal">Quem conhece a dor do povo tem o dever de lutar por ele.</h2>
+      <h2 class="reveal" data-split>Quem conhece a realidade do povo tem o dever de lutar por ele.</h2>
       <p class="reveal first-word">
-        Não entrei na política para fazer parte do sistema. Entrei porque, depois de 23 anos vendo de perto
-        a dor de quem mais precisa de Justiça, entendi que dava para fazer mais — e que era a minha vez de fazer.
+        Eu também me cansei, e entrei na política porque acredito que quem conhece a realidade do povo
+        tem o dever de lutar por ele.
       </p>
       <p class="reveal">
-        Sou filha de pequenos produtores rurais. Sei que vencer na vida dependeu de estudo, trabalho e esforço —
-        não de sorte, nem de sobrenome. Sou casada, mãe de dois filhos e de duas filhas de coração. Há 23 anos, como
-        servidora do Ministério Público mineiro, dedico minha vida a defender mulheres, crianças, adolescentes,
-        pessoas com deficiência, idosos e quem mais precisar de Justiça.
+        Sou filha de pequenos produtores rurais, mãe e servidora do Ministério Público mineiro há 23 anos,
+        sempre trabalhando para defender quem mais precisa de Justiça.
       </p>
       <p class="reveal">
-        Quero ser, em Brasília, a voz de quem acorda cedo, trabalha duro, sonha com um futuro melhor e se recusa
-        a perder a esperança.
+        Quero ser, em Brasília, a voz de quem acorda cedo, trabalha duro e ainda acredita em um futuro melhor.
       </p>
 
       <div class="bio-facts reveal">
@@ -557,8 +114,9 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
   <section class="quote-block">
     <span class="quote-mark" aria-hidden="true">"</span>
     <div class="wrap">
-      <blockquote class="reveal">
-        É hora de trocarmos promessas por coragem. E os políticos de sempre, por gente de verdade.
+      <blockquote class="reveal" data-split>
+        É hora de trocar promessas por compromissos de verdade! Trocar os políticos de sempre, por pessoas
+        que trabalham e conhecem de perto os problemas da nossa gente!
       </blockquote>
       <cite class="reveal">— Fanny Melo</cite>
     </div>
@@ -570,8 +128,8 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
   <div class="wrap">
     <div class="gallery-head-row">
       <div class="section-head reveal" style="margin-bottom:0;">
-        <div class="eyebrow">Pré-candidatura</div>
-        <h2 style="font-size:clamp(26px,3vw,36px);">Uma pré-candidatura com propósito</h2>
+        <div class="eyebrow">Candidatura</div>
+        <h2 style="font-size:clamp(26px,3vw,36px);">Uma candidatura com propósito</h2>
       </div>
       <div class="carousel-arrows reveal">
         <button class="carousel-arrow" id="galPrev" aria-label="Foto anterior">
@@ -650,87 +208,12 @@ footer{background:var(--grafite);color:rgba(255,255,255,.65);padding:64px 0 30px
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-legal">Fanny Melo — Pré-candidata a Deputada Federal por Minas Gerais. Pré-candidatura sujeita a definições e alianças partidárias, nos termos da legislação eleitoral vigente.</p>
+      <p class="footer-legal">Fanny Melo — Candidata a Deputada Federal por Minas Gerais. Candidatura sujeita a definições e alianças partidárias, nos termos da legislação eleitoral vigente.</p>
       <p>© 2026 Fanny Melo</p>
     </div>
   </div>
 </footer>
 
-<script>
-const burger = document.getElementById('burgerBtn');
-const panel = document.getElementById('mobilePanel');
-burger.addEventListener('click', () => panel.classList.toggle('open'));
-panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
-
-const revealEls = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('in');
-      io.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-revealEls.forEach((el) => io.observe(el));
-
-document.querySelectorAll('section').forEach(section => {
-  const items = section.querySelectorAll('.reveal');
-  items.forEach((el, i) => { el.style.transitionDelay = Math.min(i,5) * 70 + 'ms'; });
-});
-
-// barra de progresso de leitura
-const progressBar = document.getElementById('scrollProgress');
-function updateProgress(){
-  const h = document.documentElement;
-  const scrolled = h.scrollTop;
-  const max = h.scrollHeight - h.clientHeight;
-  progressBar.style.width = (max > 0 ? (scrolled / max) * 100 : 0) + '%';
-}
-document.addEventListener('scroll', updateProgress, { passive: true });
-updateProgress();
-
-// parallax suave nos blobs do hero
-const blob1 = document.querySelector('.hero-blobs .b1');
-const blob2 = document.querySelector('.hero-blobs .b2');
-function updateParallax(){
-  const y = window.scrollY;
-  if (blob1) blob1.style.transform = `translateY(${y * 0.18}px)`;
-  if (blob2) blob2.style.transform = `translateY(${y * 0.3}px)`;
-}
-document.addEventListener('scroll', updateParallax, { passive: true });
-updateParallax();
-
-// carrossel de fotos
-const galTrack = document.getElementById('galTrack');
-const galPrev = document.getElementById('galPrev');
-const galNext = document.getElementById('galNext');
-const galDots = document.getElementById('galDots');
-if (galTrack) {
-  const cards = Array.from(galTrack.children);
-  cards.forEach((_, i) => {
-    const dot = document.createElement('span');
-    if (i === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => cards[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' }));
-    galDots.appendChild(dot);
-  });
-  const dots = Array.from(galDots.children);
-
-  function cardStep(){
-    const card = cards[0];
-    const style = getComputedStyle(galTrack);
-    return card.getBoundingClientRect().width + parseFloat(style.gap || 20);
-  }
-  function updateCarouselUI(){
-    const idx = Math.round(galTrack.scrollLeft / cardStep());
-    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
-    galPrev.disabled = galTrack.scrollLeft <= 4;
-    galNext.disabled = galTrack.scrollLeft >= galTrack.scrollWidth - galTrack.clientWidth - 4;
-  }
-  galPrev.addEventListener('click', () => galTrack.scrollBy({ left: -cardStep(), behavior: 'smooth' }));
-  galNext.addEventListener('click', () => galTrack.scrollBy({ left: cardStep(), behavior: 'smooth' }));
-  galTrack.addEventListener('scroll', () => requestAnimationFrame(updateCarouselUI), { passive: true });
-  updateCarouselUI();
-}
-</script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
