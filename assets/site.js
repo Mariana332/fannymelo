@@ -221,7 +221,7 @@ if (apoioForm) {
     const cidade = document.getElementById('cidade').value.trim();
     const whatsapp = document.getElementById('whatsapp').value.trim();
     const numeroFanny = '5534991037599';
-    let msg = 'Olá! Quero apoiar a pré-candidatura de Fanny Melo.';
+    let msg = 'Olá! Quero apoiar a candidatura de Fanny Melo.';
     msg += '\nNome: ' + nome;
     if (cidade) msg += '\nCidade: ' + cidade;
     msg += '\nMeu WhatsApp: ' + whatsapp;
