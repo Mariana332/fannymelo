@@ -58,12 +58,33 @@ if (!prefersReducedMotion) {
   });
 }
 
+// ============ CONTADORES ANIMADOS ============
+function animateCount(el) {
+  const target = parseInt(el.dataset.count, 10);
+  const pad = parseInt(el.dataset.pad || '0', 10);
+  if (prefersReducedMotion || isNaN(target)) {
+    el.textContent = pad ? String(target).padStart(pad, '0') : String(target);
+    return;
+  }
+  const duration = 1100;
+  const start = performance.now();
+  function tick(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    const value = Math.round(target * eased);
+    el.textContent = pad ? String(value).padStart(pad, '0') : String(value);
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
 // ============ REVEAL ON SCROLL ============
 const revealEls = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('in');
+      entry.target.querySelectorAll('.count').forEach(animateCount);
       io.unobserve(entry.target);
     }
   });
@@ -188,5 +209,15 @@ if (apoioForm) {
     const url = 'https://wa.me/' + numeroFanny + '?text=' + encodeURIComponent(msg);
     window.open(url, '_blank', 'noopener');
     this.reset();
+    this.style.display = 'none';
+    const success = document.getElementById('formSuccess');
+    if (success) success.classList.add('show');
   });
+  const successReset = document.getElementById('formSuccessReset');
+  if (successReset) {
+    successReset.addEventListener('click', () => {
+      document.getElementById('formSuccess').classList.remove('show');
+      apoioForm.style.display = '';
+    });
+  }
 }
