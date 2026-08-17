@@ -78,6 +78,24 @@ function animateCount(el) {
   requestAnimationFrame(tick);
 }
 
+// ============ ÍCONES COM TRAÇADO (line-draw) ============
+// stroke-dasharray/offset calculados a partir do comprimento REAL de cada
+// forma, para que todo ícone se desenhe no mesmo ritmo visual, independente
+// de quão simples ou complexo é o seu contorno.
+document.querySelectorAll('.ic-circle svg').forEach(svg => {
+  svg.querySelectorAll('path, rect, circle').forEach(shape => {
+    if (typeof shape.getTotalLength !== 'function') return;
+    const len = shape.getTotalLength();
+    shape.style.strokeDasharray = len;
+    shape.style.strokeDashoffset = prefersReducedMotion ? 0 : len;
+  });
+});
+function drawIcons(container) {
+  container.querySelectorAll('.ic-circle svg path, .ic-circle svg rect, .ic-circle svg circle').forEach(shape => {
+    shape.style.strokeDashoffset = 0;
+  });
+}
+
 // ============ REVEAL ON SCROLL ============
 const revealEls = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries) => {
@@ -85,6 +103,7 @@ const io = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('in');
       entry.target.querySelectorAll('.count').forEach(animateCount);
+      drawIcons(entry.target);
       io.unobserve(entry.target);
     }
   });
