@@ -320,7 +320,7 @@ footer .logo-img{height:76px;}
 .section-head h2{font-size:clamp(30px,3.8vw,46px);color:var(--grafite);}
 .section-head p{margin-top:18px;font-size:16px;color:var(--grafite-3);line-height:1.7;}
 
-.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;perspective:1100px;}
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
 .pillar-card{
   background:var(--branco);padding:34px 30px;min-height:250px;border-radius:var(--r-md);
   display:flex;flex-direction:column;gap:16px;box-shadow:var(--shadow-sm);
