@@ -206,29 +206,21 @@ footer .logo-img{height:92px;}
 .btn-primary:hover{background:var(--dourado);color:var(--grafite);transform:translateY(-3px) scale(1.02);box-shadow:var(--shadow-warm);}
 .btn-outline{border:1.5px solid rgba(255,255,255,.4);color:var(--branco);}
 .btn-outline:hover{border-color:var(--branco);background:rgba(255,255,255,.08);transform:translateY(-3px) scale(1.02);}
-/* ============ SELO Nº 2060 ============ */
-.ballot-badge{
-  display:inline-flex;align-items:center;gap:18px;
-  margin-top:36px;padding:10px;
-  background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.22);
-  border-radius:var(--r-pill);backdrop-filter:blur(8px);
-  box-shadow:0 0 0 0 rgba(255,185,1,.45);
+/* ============ SANTINHO Nº 2060 ============ */
+.ballot-card{
+  display:block;margin-top:36px;width:230px;max-width:60vw;
+  border-radius:var(--r-md);overflow:hidden;line-height:0;
+  box-shadow:0 0 0 0 rgba(255,185,1,.45), var(--shadow-md);
   animation:ballotPulse 2.6s ease-in-out infinite;
+  transition:transform .25s cubic-bezier(.2,.8,.3,1.2);
 }
-.ballot-badge .ballot-num{
-  font-family:var(--display);font-weight:800;font-size:34px;color:var(--grafite);
-  background:var(--branco);padding:12px 22px;border-radius:var(--r-pill);
-  box-shadow:var(--shadow-warm);letter-spacing:.01em;line-height:1;
-}
-.ballot-badge .ballot-txt{
-  font-family:var(--mono);font-size:13px;font-weight:700;color:var(--branco);
-  line-height:1.5;text-transform:uppercase;letter-spacing:.05em;padding-right:16px;
-}
+.ballot-card:hover{transform:translateY(-4px) scale(1.02);}
+.ballot-card img{width:100%;display:block;}
 @keyframes ballotPulse{
-  0%,100%{box-shadow:0 0 0 0 rgba(255,185,1,.45);}
-  50%{box-shadow:0 0 0 10px rgba(255,185,1,0);}
+  0%,100%{box-shadow:0 0 0 0 rgba(255,185,1,.45), var(--shadow-md);}
+  50%{box-shadow:0 0 0 10px rgba(255,185,1,0), var(--shadow-md);}
 }
-@media (prefers-reduced-motion: reduce){.ballot-badge{animation:none;}}
+@media (prefers-reduced-motion: reduce){.ballot-card{animation:none;}}
 
 /* ============ SELO Nº 2060 (NAV) ============ */
 .nav-ballot{
