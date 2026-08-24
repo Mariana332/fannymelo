@@ -215,15 +215,46 @@ if (galTrack) {
 // ============ FORMULÁRIO DE APOIO (contato) ============
 const apoioForm = document.getElementById('apoioForm');
 if (apoioForm) {
+  const grupoWhatsapp = 'https://chat.whatsapp.com/IdvWDYwZjdd3Fg9F4Ndlxx?s=sw&p=i&mlu=0&amv=2';
+  let mensagemApoio = '';
+
+  function copiarMensagemApoio() {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(mensagemApoio).catch(() => {});
+    }
+  }
+
   apoioForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    const grupoWhatsapp = 'https://chat.whatsapp.com/IdvWDYwZjdd3Fg9F4Ndlxx?s=sw&p=i&mlu=0&amv=2';
+    const nome = document.getElementById('nome').value.trim();
+    const cidade = document.getElementById('cidade').value.trim();
+    const whatsapp = document.getElementById('whatsapp').value.trim();
+    mensagemApoio = 'Olá! Quero apoiar a candidatura de Fanny Melo.';
+    mensagemApoio += '\nNome: ' + nome;
+    if (cidade) mensagemApoio += '\nCidade: ' + cidade;
+    mensagemApoio += '\nMeu WhatsApp: ' + whatsapp;
+
     window.open(grupoWhatsapp, '_blank', 'noopener');
+    copiarMensagemApoio();
+
+    const successMsg = document.getElementById('formSuccessMessage');
+    if (successMsg) successMsg.textContent = mensagemApoio;
+
     this.reset();
     this.style.display = 'none';
     const success = document.getElementById('formSuccess');
     if (success) success.classList.add('show');
   });
+
+  const successCopy = document.getElementById('formSuccessCopy');
+  if (successCopy) {
+    successCopy.addEventListener('click', () => {
+      copiarMensagemApoio();
+      successCopy.textContent = 'Copiado!';
+      setTimeout(() => { successCopy.textContent = 'Copiar mensagem'; }, 2000);
+    });
+  }
+
   const successReset = document.getElementById('formSuccessReset');
   if (successReset) {
     successReset.addEventListener('click', () => {

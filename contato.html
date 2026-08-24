@@ -103,10 +103,12 @@
         </div>
         <button type="submit" class="btn btn-primary">Quero apoiar</button>
       </form>
-      <p class="form-note">Ao enviar, você será direcionado ao grupo do time no WhatsApp para confirmar seu apoio à minha candidatura.</p>
+      <p class="form-note">Ao enviar, sua mensagem é copiada e você é direcionado ao grupo do time no WhatsApp — é só colar (Ctrl+V) assim que entrar para confirmar seu apoio.</p>
       <div class="form-success" id="formSuccess" aria-live="polite">
         <span class="form-success-icon">✓</span>
-        <p>Prontinho! Você foi direcionado ao grupo do time no WhatsApp.</p>
+        <p>Prontinho! Mensagem copiada e grupo do time aberto no WhatsApp. Cole (Ctrl+V) assim que entrar:</p>
+        <p class="form-success-message" id="formSuccessMessage"></p>
+        <button type="button" class="form-success-copy" id="formSuccessCopy">Copiar mensagem</button>
         <button type="button" class="form-success-reset" id="formSuccessReset">Enviar outro contato</button>
       </div>
     </div>
