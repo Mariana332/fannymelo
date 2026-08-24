@@ -104,6 +104,10 @@ h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;letter-spac
 .logo-img{display:block;height:46px;width:auto;}
 .nav .logo-img{height:66px;}
 footer .logo-img{height:92px;}
+.nav .logo-img.nav-logo-wide{height:38px;}
+@media (max-width:900px){
+  .nav .logo-img.nav-logo-wide{height:30px;}
+}
 
 /* ============ NAV ============ */
 .nav{
