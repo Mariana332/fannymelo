@@ -217,16 +217,8 @@ const apoioForm = document.getElementById('apoioForm');
 if (apoioForm) {
   apoioForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    const nome = document.getElementById('nome').value.trim();
-    const cidade = document.getElementById('cidade').value.trim();
-    const whatsapp = document.getElementById('whatsapp').value.trim();
-    const numeroFanny = '5534991037599';
-    let msg = 'Olá! Quero apoiar a candidatura de Fanny Melo.';
-    msg += '\nNome: ' + nome;
-    if (cidade) msg += '\nCidade: ' + cidade;
-    msg += '\nMeu WhatsApp: ' + whatsapp;
-    const url = 'https://wa.me/' + numeroFanny + '?text=' + encodeURIComponent(msg);
-    window.open(url, '_blank', 'noopener');
+    const grupoWhatsapp = 'https://chat.whatsapp.com/IdvWDYwZjdd3Fg9F4Ndlxx?s=sw&p=i&mlu=0&amv=2';
+    window.open(grupoWhatsapp, '_blank', 'noopener');
     this.reset();
     this.style.display = 'none';
     const success = document.getElementById('formSuccess');
