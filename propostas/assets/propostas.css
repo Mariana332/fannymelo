@@ -1,0 +1,90 @@
+/* ============ PLANO DE PROPOSTAS — estilos específicos ============ */
+
+/* TOC (sumário rápido) */
+.toc-section{padding:0 0 20px;background:var(--off-white);}
+.toc-chips{display:flex;flex-wrap:wrap;gap:10px;}
+.toc-chip{
+  font-family:var(--corpo);font-size:13px;font-weight:600;color:var(--grafite-2);
+  background:var(--branco);border:1.5px solid var(--linha-clara);
+  padding:10px 16px;border-radius:var(--r-pill);
+  transition:border-color .2s ease, color .2s ease, transform .2s ease, background .2s ease;
+}
+.toc-chip:hover{border-color:var(--laranja);color:var(--laranja-escuro);transform:translateY(-2px);}
+
+/* Lista de propostas (accordion) */
+.proposals{padding:20px 0 90px;background:var(--off-white);}
+.proposals-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:36px;}
+.toggle-all{
+  font-family:var(--corpo);font-size:13.5px;font-weight:700;color:var(--laranja-escuro);
+  background:var(--laranja-fumo);border:none;cursor:pointer;
+  padding:12px 20px;border-radius:var(--r-pill);white-space:nowrap;
+  transition:background .2s ease, color .2s ease, transform .2s ease;
+}
+.toggle-all:hover{background:var(--laranja);color:var(--branco);transform:translateY(-2px);}
+
+.proposal-item{
+  background:var(--branco);border-radius:var(--r-md);box-shadow:var(--shadow-sm);
+  margin-bottom:16px;overflow:hidden;scroll-margin-top:96px;
+}
+.proposal-item[open]{box-shadow:var(--shadow-md);}
+.proposal-item summary{
+  list-style:none;cursor:pointer;
+  display:flex;align-items:center;gap:18px;
+  padding:24px 26px;
+}
+.proposal-item summary::-webkit-details-marker{display:none;}
+.proposal-num{
+  font-family:var(--display);font-weight:800;font-size:15px;color:var(--laranja-escuro);
+  background:var(--laranja-fumo);width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.proposal-item summary h3{
+  font-family:var(--display);font-size:19px;font-weight:700;color:var(--grafite);
+  line-height:1.25;flex:1;
+}
+.proposal-chevron{
+  width:22px;height:22px;flex-shrink:0;color:var(--grafite-3);
+  transition:transform .3s cubic-bezier(.2,.8,.3,1.2);
+}
+.proposal-item[open] .proposal-chevron{transform:rotate(180deg);}
+.proposal-body{padding:0 26px 30px 82px;}
+.proposal-body .proposal-intro{font-size:15px;color:var(--grafite-3);line-height:1.75;margin-bottom:16px;}
+.proposal-body ul{display:flex;flex-direction:column;gap:12px;}
+.proposal-body li{
+  font-size:14.5px;color:var(--grafite-2);line-height:1.65;
+  padding-left:20px;position:relative;
+}
+.proposal-body li::before{
+  content:"";position:absolute;left:0;top:8px;
+  width:7px;height:7px;border-radius:50%;background:var(--laranja);
+}
+.proposal-body .proposal-note{
+  margin-top:18px;font-family:var(--display);font-weight:700;font-size:15.5px;
+  color:var(--grafite);
+}
+
+@media (max-width:640px){
+  .proposal-body{padding:0 20px 26px 20px;}
+  .proposal-item summary{padding:20px;gap:14px;}
+}
+
+/* Bloco de compromisso final */
+.commitment{padding:70px 0 100px;background:var(--branco);}
+.commitment-card{
+  background:var(--grafite);color:var(--branco);border-radius:var(--r-lg);
+  padding:56px;position:relative;overflow:hidden;
+}
+.commitment-card .blob{position:absolute;top:-100px;left:-80px;width:360px;height:360px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, rgba(255,185,1,.35), rgba(255,185,1,0) 70%);filter:blur(4px);pointer-events:none;}
+.commitment-card h2{font-size:clamp(26px,3.4vw,38px);position:relative;z-index:1;margin-bottom:18px;}
+.commitment-card p{font-size:16px;color:rgba(255,255,255,.72);line-height:1.75;max-width:680px;position:relative;z-index:1;margin-bottom:28px;}
+.commitment-list{display:flex;flex-direction:column;gap:14px;margin-bottom:36px;position:relative;z-index:1;}
+.commitment-list li{
+  display:flex;gap:14px;align-items:flex-start;font-size:15.5px;color:var(--branco);line-height:1.5;
+}
+.commitment-list .dot-ic{margin-top:6px;background:var(--dourado);}
+.commitment-card .slogan-final{
+  font-family:var(--display);font-weight:800;font-size:18px;color:var(--dourado);
+  position:relative;z-index:1;
+}
+@media (max-width:640px){.commitment-card{padding:34px 24px;}}
