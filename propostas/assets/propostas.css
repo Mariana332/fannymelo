@@ -14,13 +14,17 @@
 /* Lista de propostas (accordion) */
 .proposals{padding:20px 0 90px;background:var(--off-white);}
 .proposals-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:36px;}
+.proposals-head-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
 .toggle-all{
   font-family:var(--corpo);font-size:13.5px;font-weight:700;color:var(--laranja-escuro);
   background:var(--laranja-fumo);border:none;cursor:pointer;
   padding:12px 20px;border-radius:var(--r-pill);white-space:nowrap;
+  display:inline-flex;align-items:center;gap:8px;
   transition:background .2s ease, color .2s ease, transform .2s ease;
 }
 .toggle-all:hover{background:var(--laranja);color:var(--branco);transform:translateY(-2px);}
+.toggle-all-download{background:transparent;border:1.5px solid var(--linha-clara);color:var(--grafite-2);}
+.toggle-all-download:hover{background:var(--grafite);border-color:var(--grafite);color:var(--branco);}
 
 .proposal-item{
   background:var(--branco);border-radius:var(--r-md);box-shadow:var(--shadow-sm);
