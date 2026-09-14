@@ -385,6 +385,91 @@ footer .logo-img{height:76px;}
 .carousel-dots span.active{background:var(--laranja);width:20px;border-radius:var(--r-pill);}
 @media (max-width:640px){.carousel-arrows{display:none;}}
 
+/* ============ PROPOSTAS (accordion) ============ */
+.propostas-section{padding:80px 0 100px;background:var(--off-white);}
+
+.accordion{margin-top:52px;display:flex;flex-direction:column;gap:14px;}
+.acc-item{
+  background:var(--branco);border-radius:var(--r-md);box-shadow:var(--shadow-sm);
+  border:1px solid var(--linha-clara);overflow:hidden;
+}
+.acc-trigger{
+  width:100%;display:flex;align-items:center;gap:18px;
+  padding:22px 24px;background:none;border:none;cursor:pointer;text-align:left;
+}
+.acc-num{
+  font-family:var(--mono);font-size:13px;font-weight:700;color:var(--laranja-escuro);
+  background:var(--laranja-fumo);width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.acc-title{
+  flex:1;font-family:var(--display);font-size:16.5px;font-weight:700;
+  color:var(--grafite);line-height:1.35;
+}
+.acc-icon{
+  position:relative;width:26px;height:26px;border-radius:50%;background:var(--off-white);
+  flex-shrink:0;transition:transform .3s cubic-bezier(.2,.7,.2,1), background .25s ease;
+}
+.acc-icon::before,.acc-icon::after{
+  content:"";position:absolute;top:50%;left:50%;background:var(--grafite-3);
+  transition:background .25s ease;
+}
+.acc-icon::before{width:10px;height:2px;transform:translate(-50%,-50%);}
+.acc-icon::after{width:2px;height:10px;transform:translate(-50%,-50%);}
+.acc-item.open .acc-icon{background:var(--laranja);transform:rotate(45deg);}
+.acc-item.open .acc-icon::before,.acc-item.open .acc-icon::after{background:var(--branco);}
+
+.acc-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s cubic-bezier(.2,.7,.2,1);}
+.acc-item.open .acc-panel{grid-template-rows:1fr;}
+.acc-panel-inner{overflow:hidden;min-height:0;}
+.acc-panel-inner > *{padding-left:24px;padding-right:24px;}
+.acc-panel-inner ul{padding-bottom:26px;padding-top:2px;display:flex;flex-direction:column;gap:11px;}
+.acc-panel-inner li{
+  position:relative;padding-left:20px !important;font-size:14.5px;color:var(--grafite-2);line-height:1.65;
+}
+.acc-panel-inner li::before{
+  content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--laranja);
+}
+.acc-lead{font-size:14.5px;color:var(--grafite-3);line-height:1.7;padding-bottom:16px;}
+.acc-closing{
+  font-family:var(--display);font-weight:700;font-size:14.5px;color:var(--grafite);
+  border-top:1px solid var(--linha-clara);padding-top:16px;padding-bottom:22px;line-height:1.5;
+}
+
+@media (max-width:640px){
+  .acc-trigger{padding:18px 16px;gap:12px;}
+  .acc-title{font-size:15px;}
+  .acc-panel-inner > *{padding-left:16px;padding-right:16px;}
+}
+
+/* ============ BLOCO DE COMPROMISSO ============ */
+.commitment-wrap{padding:0 0 100px;background:var(--off-white);}
+.commitment{
+  background:var(--laranja);color:var(--branco);
+  padding:70px 64px;border-radius:var(--r-lg);position:relative;overflow:hidden;
+}
+.commitment .eyebrow{color:var(--branco);opacity:.85;margin-bottom:20px;}
+.commitment h2{font-size:clamp(26px,3.4vw,42px);color:var(--branco);max-width:720px;margin-bottom:20px;}
+.commitment > p{font-size:16px;line-height:1.75;color:rgba(255,255,255,.9);max-width:680px;margin-bottom:4px;}
+.commitment-list{margin:28px 0 34px;display:flex;flex-direction:column;gap:12px;}
+.commitment-list li{
+  position:relative;padding-left:26px;font-family:var(--corpo);font-weight:600;
+  font-size:15.5px;color:var(--branco);
+}
+.commitment-list li::before{content:"✓";position:absolute;left:0;top:0;font-weight:800;}
+.commitment-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:38px;}
+.commitment .btn-outline{border-color:rgba(255,255,255,.5);}
+.commitment .btn-outline:hover{border-color:var(--branco);background:rgba(255,255,255,.14);}
+.commitment blockquote{
+  font-family:var(--display);font-weight:800;font-size:clamp(19px,2.4vw,26px);
+  border-top:1px solid rgba(255,255,255,.25);padding-top:28px;max-width:640px;
+}
+.commitment cite{
+  display:block;margin-top:14px;font-style:normal;font-family:var(--mono);
+  font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.8);
+}
+@media (max-width:640px){.commitment{padding:44px 24px;}}
+
 /* ============ TRAJETÓRIA ============ */
 .timeline-section{background:var(--grafite);color:var(--branco);padding:100px 0;}
 .timeline-section .eyebrow{color:var(--dourado);margin-bottom:18px;}
