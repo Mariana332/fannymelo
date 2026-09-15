@@ -212,16 +212,6 @@ if (galTrack) {
   updateCarouselUI();
 }
 
-// ============ ACORDEÃO DE PROPOSTAS ============
-document.querySelectorAll('.acc-item').forEach(item => {
-  const btn = item.querySelector('.acc-trigger');
-  if (!btn) return;
-  btn.addEventListener('click', () => {
-    const isOpen = item.classList.toggle('open');
-    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-});
-
 // ============ FORMULÁRIO DE APOIO (contato) ============
 const apoioForm = document.getElementById('apoioForm');
 if (apoioForm) {
